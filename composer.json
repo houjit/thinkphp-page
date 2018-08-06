@@ -1,6 +1,7 @@
 {
   "name": "houjit/thinkphp-page",
   "description": "基于thinkphp5.1+的分页",
+  "type": "library",
   "license": "MIT",
   "authors": [
     {
@@ -14,7 +15,7 @@
   "minimum-stability" : "dev",
   "autoload": {
     "psr-4": {
-      "houjit\\ChinaArea\\": "src/"
+      "houjit\\page\\": "src/"
     }
   }
 }

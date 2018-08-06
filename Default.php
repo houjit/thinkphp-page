@@ -9,16 +9,14 @@ namespace hou\page;
  * Param: Array $type:分页类型（layui,bootstrap...）  $model:查询的模型，必传项
  * 自定义扩展分页操作类
  * $total 总记录数  $limit 一页显示多少条
- * 数组调用：
-    \cocolait\bootstrap\page\Send::instance(['total' => 10, 'limit' => 10])->render($pages,$pageNums,$this->request->param());
  * 参数介绍：
     $page 分页参数 $pageNums  总页数  第三参数是 分页额外参数 字符串或者数组
  *
  * @package hou\page
  */
 class Default extend \think\Controller {
-    public function switchs(){
-    	$param = request()->param();
+    public function switchs($param=''){
+    	$param = empty($param)?request()->param():$param;
 	if(empty($param['model'])){
 		$this->error('模型名称不能为空');
 	}

@@ -58,14 +58,14 @@ class Layui{
     protected $entranceUrl;
     // 初始化
     private function __construct($options){
-        if (!defined('THINK_VERSION')) {
+        if (!App::version()) {
             $this->throwException('该扩展只支持ThinkPHP v5.0.x版本');
         } else {
-            if (THINK_VERSION < '5.0') {
+            if (App::version() < '5.0') {
                 $this->throwException('该扩展只支持ThinkPHP v5.0.x版本');
             }
         }
-        $this->request = Request::instance();
+        $this->request = request();
         if (!defined('BIND_MODULE')) {
             $this->entranceUrl = $this->request->baseFile() . '/' . $this->request->module() . '/' . $this->request->controller() . "/" . $this->request->action();
         } else{
@@ -124,7 +124,7 @@ class Layui{
      */
     public function render($page ,$pageNum ,$query = null){
         if ($pageNum > 0) {
-            $html = "<div class='page'>";
+            $html = "<div class='layui-box layui-laypage layui-laypage-default'>";
             $html .= "<style>.page a.cp-disabled{
                 color: #DDDDDD;
 }</style>";

@@ -1,21 +1,14 @@
 {
-  "name": "houjit/thinkphp-page",
-  "description": "基于thinkphp5.1+的分页",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "houjit",
-      "email": "amos@houjit.com"
-    }
-  ],
-  "require": {
-    "php":">=7.0.0"
-  },
-  "minimum-stability" : "dev",
-  "autoload": {
-    "psr-4": {
-      "houjit\\page\\": "src/"
-    }
-  }
+    "name": "houjit/thinkphp-page",
+    "description": "基于thinkphp5.1+的分页",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "houjit",
+            "email": "447107108@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }

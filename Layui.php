@@ -20,7 +20,7 @@ use think\Request;
  * Class Send
  * @package cbootstrap\page
  */
-class Default{
+class Layui{
     /**
      * 静态代理
      * @var
